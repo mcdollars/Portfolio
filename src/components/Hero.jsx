@@ -1,11 +1,11 @@
 import React from "react";
-import hero from "../assets/images/hero.png";
+import hero from "../assets/images/profil.png";
 const Hero = () => {
   const social_media = [
-    "logo-instagram",
-    "logo-facebook",
-    "logo-linkedin",
-    "logo-twitter",
+    {icon:"logo-instagram",link:"#"},
+    {icon:"logo-facebook",link:"#"},
+    {icon:"logo-linkedin",link:"https://www.linkedin.com/in/manibharathi-m/"},
+    {icon:"logo-twitter",link:"https://twitter.com/Mani02181917"}
   ];
   return (
     <section
@@ -22,19 +22,21 @@ const Hero = () => {
               Hello!
               <br />
             </span>
-            My Name is <span>John Alex</span>
+            My Name is <span>Mani </span>
           </h1>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Fullstack Developer
+            Fullstack Developer <span style={{color: "white"}} > & </span> pen tester
           </h4>
           <button className="btn-primary mt-8">Contact Me</button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            {social_media?.map((icon) => (
+            {social_media?.map((i) => (
               <div
-                key={icon}
+                key={i.icon}
                 className="text-gray-600 hover:text-white cursor-pointer "
-              >
-                <ion-icon name={icon}></ion-icon>
+              ><a href={i.link} target="_blank">
+
+                <ion-icon name={i.icon}></ion-icon>
+              </a>
               </div>
             ))}
           </div>

@@ -12,15 +12,15 @@ const Hireme = () => {
       <div className="bg-gray-700 relative px-8 rounded-2xl py-5 lg:max-w-4xl mx-auto min-h-[24rem] mt-24 flex gap-6 lg:flex-row flex-col-reverse items-center">
         <div>
           <h2 className="text-2xl font-semibold">
-            Do you want any work from me?
+          Career Objective !
+            {/* Do you want any work from me? */}
           </h2>
           <p className="lg:text-left text-justify max-w-lg text-sm mt-4 text-gray-200 leading-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta
-            soluta quos tempore eos accusamus cupiditate, amet in similique
-            sapiente obcaecati odio deleniti architecto corporis ratione.
-            Consequatur a quidem maiores!
+          Looking for a challenging role in a reputable organization to utilize my technical, database,and
+          management skills for the growth of the organization as well as to enhance my knowledge about
+          new and emerging trends in the IT sector.
           </p>
-          <button className="btn-primary mt-10">Say Hello</button>
+          <button className="btn-primary mt-10">Resum </button>
         </div>
         <img
           src={hireMe}
