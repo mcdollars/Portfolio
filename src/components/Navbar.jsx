@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const menuLinks = [
     { name: "HOME", link: "#home" },
-    { name: "ABOUT", link: "#about" },
+    { name: "ABOUT", link: "#hireme" },
     { name: "SKILLS", link: "#skills" },
     { name: "PROJECTS", link: "#projects" },
     { name: "CONTACT", link: "#contact" },
@@ -24,8 +24,8 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between">
         <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
-            K<span className="text-cyan-600">I</span>K<span className="text-cyan-600">0</span>
+          <h4 className="text-4xl font-bold ">
+            K<span className="text-cyan-600 font-serif">i</span>K<span className="text-cyan-600">0</span>
           </h4>
         </div>
         <div

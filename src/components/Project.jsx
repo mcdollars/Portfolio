@@ -22,11 +22,12 @@ export default class Project extends Component {
   
   componentDidMount() {
 
-    axios.get(`https://script.google.com/macros/s/AKfycbwCnc9kUHdpVideuk9_IwaYawI4djaaaE5y4AuuP8dE84auCtQnTyt3kWVrgkD1tD9xQg/exec?action=read&table=Project`)
+    axios.get(`${import.meta.env.VITE_KEY}action=read&table=Project`)
     .then(response => {
       const project_data = response.data;
       this.setState ({projects:project_data.data});
-      // console.log("data"+JSON.stringify(this.state.projects))
+      console.log(import.meta.env)
+      console.log("data123"+process.env.key)
     })
   }
   render() {
@@ -74,7 +75,6 @@ export default class Project extends Component {
       <br />
       <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative">
         <div className="lg:w-2/3 w-full">
-          {console.log("datass"+JSON.stringify(this.state.projects))}
           <Swiper
             slidesPerview={1.2}
             spaceBetween={20}
@@ -119,7 +119,7 @@ export default class Project extends Component {
           </Swiper>
         </div>
         <div >
-          <img src={project_person} alt="" className="lg:block lg:h-[30rem] py-0 hidden h-80 lg:absolute bottom-0 right-0 "  />
+          <img src={project_person} alt="" className="lg:block lg:h-[27rem] py-0 hidden h-80 lg:absolute bottom-0 right-0 "  />
         </div>
       </div>
     </section>
