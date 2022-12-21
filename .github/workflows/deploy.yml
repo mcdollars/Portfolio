@@ -50,4 +50,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
         env:
-          VITE_KEY: ${{secrets.KEY}}
+          VITE_KEY: ${{secrets.VITE_KEY}}
