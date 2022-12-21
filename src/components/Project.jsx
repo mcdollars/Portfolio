@@ -22,7 +22,7 @@ export default class Project extends Component {
   
   componentDidMount() {
 
-    axios.get(`${import.meta.env.VITE_KEY}action=read&table=Project`)
+    axios.get(`https://script.google.com/macros/s/AKfycbwCnc9kUHdpVideuk9_IwaYawI4djaaaE5y4AuuP8dE84auCtQnTyt3kWVrgkD1tD9xQg/exec?action=read&table=Project`)
     .then(response => {
       const project_data = response.data;
       this.setState ({projects:project_data.data});
