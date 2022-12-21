@@ -26,7 +26,7 @@ export default class Project extends Component {
     .then(response => {
       const project_data = response.data;
       this.setState ({projects:project_data.data});
-      console.log(import.meta.env)
+      console.log("datas"+JSON.stringify(import.meta.env))
       console.log("data123"+process.env.key)
     })
   }
