@@ -1,7 +1,26 @@
-import React from "react";
+import React,{Component} from "react";
+import axios from "axios";
 import hireMe from "../assets/images/hireMe.png";
-const Hireme = () => {
-  return (
+export default class Hireme extends Component {
+  constructor(props){
+    super(props)
+    
+  }
+  state = {
+    Resume: []
+  }
+  
+  componentDidMount() {
+
+    axios.get(`https://script.google.com/macros/s/AKfycbwCnc9kUHdpVideuk9_IwaYawI4djaaaE5y4AuuP8dE84auCtQnTyt3kWVrgkD1tD9xQg/exec?action=read&table=Bio&id=1`)
+    .then(response => {
+      const skil = response.data;
+      this.setState ({Resume:skil.data.resume});
+    })
+  }
+  render() {
+
+  return( 
     <section id="hireme" className="py-10 px-3 text-white">
       <div className="text-center">
         <h3 className="text-4xl font-semibold">
@@ -20,7 +39,7 @@ const Hireme = () => {
           management skills for the growth of the organization as well as to enhance my knowledge about
           new and emerging trends in the IT sector.
           </p>
-          <button className="btn-primary mt-10">Resum </button>
+          <a href={this.state.Resume} target="_blank"><button  className="btn-primary mt-10"> Resume</button></a>
         </div>
         <img
           src={hireMe}
@@ -29,7 +48,8 @@ const Hireme = () => {
         />
       </div>
     </section>
-  );
-};
 
-export default Hireme;
+  )
+
+  }
+}
