@@ -12,7 +12,7 @@ export default class Hireme extends Component {
   
   componentDidMount() {
 
-    axios.get(`https://script.google.com/macros/s/AKfycbwCnc9kUHdpVideuk9_IwaYawI4djaaaE5y4AuuP8dE84auCtQnTyt3kWVrgkD1tD9xQg/exec?action=read&table=Bio&id=1`)
+    axios.get(`https://script.google.com/macros/s/${import.meta.env.VITE_KEY}/exec?action=read&table=Bio&id=1`)
     .then(response => {
       const skil = response.data;
       this.setState ({Resume:skil.data.resume});

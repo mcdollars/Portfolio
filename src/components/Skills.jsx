@@ -11,7 +11,7 @@ export default class Skills extends Component {
   
   componentDidMount() {
 
-    axios.get(`https://script.google.com/macros/s/AKfycbwCnc9kUHdpVideuk9_IwaYawI4djaaaE5y4AuuP8dE84auCtQnTyt3kWVrgkD1tD9xQg/exec?action=read&table=Skils`)
+    axios.get(`https://script.google.com/macros/s/${import.meta.env.VITE_KEY}/exec?action=read&table=Skils`)
     .then(response => {
       const skil = response.data;
       this.setState ({skills:skil.data});

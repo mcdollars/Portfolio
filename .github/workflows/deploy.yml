@@ -11,7 +11,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      VITE_MANA: days
+      VITE_MANA1: days1
+      VITE_KEY: ${{ secrets.VITE_KEY }}
 
     steps:
       - name: Checkout repo

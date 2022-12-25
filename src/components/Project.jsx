@@ -1,10 +1,5 @@
 import React,{Component} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/project-1.png";
-import project2 from "../assets/images/project-2.jpg";
-import project3 from "../assets/images/project-3.jpg";
-import project4 from "../assets/images/project-4.jpg";
-import project5 from "../assets/images/project-5.png";
 import project_person from "../assets/images/Project_person.png";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,7 +17,7 @@ export default class Project extends Component {
   
   componentDidMount() {
 
-    axios.get(`https://script.google.com/macros/s/AKfycbwCnc9kUHdpVideuk9_IwaYawI4djaaaE5y4AuuP8dE84auCtQnTyt3kWVrgkD1tD9xQg/exec?action=read&table=Project`)
+    axios.get(`https://script.google.com/macros/s/${import.meta.env.VITE_KEY}/exec?action=read&table=Project`)
     .then(response => {
       const project_data = response.data;
       this.setState ({projects:project_data.data});
