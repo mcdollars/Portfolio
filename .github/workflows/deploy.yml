@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-  env:
-    VITE_MANA: days
+env:
+  VITE_MANA: days
 jobs:
   build:
     name: Build
@@ -16,9 +16,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        env:
-          VITE_NANA: days
-
+    
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
