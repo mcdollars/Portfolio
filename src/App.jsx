@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 // import Bot from "./components/Bot";
+console.log('ENV vlaus:'+JSON.stringify(import.meta.env));
 const App = () => {
   return (
     <div>

@@ -4,15 +4,20 @@ on:
   push:
     branches:
       - main
-
+  env:
+    VITE_MANA: days
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    env:
+      VITE_MANA: days
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        env:
+          VITE_NANA: days
 
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -35,6 +40,8 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    env:
+      VITE_YEAR: days
     if: github.ref == 'refs/heads/main'
 
     steps:
@@ -50,4 +57,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
         env:
-          VITE_KEY: ${{secrets.VITE_KEY}}
+          VITE_DAY: days
+          VITE_KEYS:  ${{ secrets.GITHUB_TOKEN }}
