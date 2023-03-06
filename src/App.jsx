@@ -7,18 +7,16 @@ import Hireme from "./components/Hireme";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Timeline from "./components/Timeline"
+import Journey from "./components/Journey"
 // import Bot from "./components/Bot";
 console.log('ENV vlaus:'+JSON.stringify(import.meta.env));
 const App = () => {
   return (
     <div>
       <Navbar />
-      {/* <Bot/> */}
       <Hero />
-      {/* <About/> */}
       <Hireme />
-      <Timeline />
+      <Journey />
       <Skills />
       <Project />
       <Contact />

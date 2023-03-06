@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import axios from "axios"
-export default class Timeline extends Component {
+export default class Journey extends Component {
   constructor(props){
     super(props)
     
@@ -25,7 +25,7 @@ export default class Timeline extends Component {
         <h3 className="text-4xl font-semibold">
           My <span className="text-cyan-600">Journey</span>
         </h3>
-        <p className="text-gray-400 mt-3 text-lg pb-10">My life ceireer journey.</p>
+        <p className="text-gray-400 mt-3 text-lg pb-10">My life career journey.</p>
           
         <div >
             {this.state.journeys?.map((journey, i) => (
