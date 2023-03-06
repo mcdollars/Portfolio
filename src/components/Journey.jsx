@@ -33,8 +33,10 @@ export default class Journey extends Component {
                     <div className="col-span-4 w-full h-full ">
                         {i%2==0 ? 
                         <div className="border-2 group border-cyan-600 w-full h-full bg-gray-900 rounded-md p-2 md:pl-4 text-left">
-                            <h1 className="uppercase text-white text-xl font-medium py-2 group-hover:text-cyan-600 ">{journey.title}</h1>
-                            <p className="text-gray-100 sm:text-sm text-xs">{journey.content}</p>
+                          <h1 className="uppercase text-white text-xl font-medium  group-hover:text-cyan-600 py-2 ">{journey.title}
+                            <span className="text-sm text-gray-600" > {journey.year}</span>
+                          </h1>
+                          <p className="text-gray-100 sm:text-sm text-xs">{journey.content}</p>
                         </div> : "" }
                     </div>
                     <div className="relative col-span-1 w-full h-full flex justify-center items-center">
@@ -44,7 +46,9 @@ export default class Journey extends Component {
                     <div className="col-span-4 w-full h-full">
                         {i%2!=0 ? 
                         <div className="border-2 group border-cyan-600 w-full h-full bg-gray-900 rounded-md p-2 md:pl-4 text-left">
-                            <h1 className="uppercase text-white text-xl font-medium py-2 group-hover:text-cyan-600">{journey.title}</h1>
+                            <h1 className="uppercase text-white text-xl font-medium  group-hover:text-cyan-600 py-2 ">{journey.title}
+                              <span className="text-sm text-gray-600" > {journey.year}</span>
+                            </h1>
                             <p className="text-gray-100 sm:text-sm text-xs">{journey.content}</p>
                         </div> : "" }
                     </div>

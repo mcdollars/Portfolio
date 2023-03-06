@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Hireme from "./components/Hireme";
@@ -12,7 +11,7 @@ import Journey from "./components/Journey"
 console.log('ENV vlaus:'+JSON.stringify(import.meta.env));
 const App = () => {
   return (
-    <div>
+    <div className="cursor-default" >
       <Navbar />
       <Hero />
       <Hireme />
